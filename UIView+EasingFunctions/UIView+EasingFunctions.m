@@ -24,7 +24,7 @@ CAKeyframeAnimation *AnimationWithCGFloat(NSString *keyPath, ViewEasingFunctionP
 	for(size_t frame = 0; frame < KeyframeCount; ++frame, t += dt) {
         
 		CGFloat value = fromValue + function(t) * (toValue - fromValue);
-		[values addObject:[NSNumber numberWithFloat:value]];
+		[values addObject:@(value)];
         
 	}
 	
